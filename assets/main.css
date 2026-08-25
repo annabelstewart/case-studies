@@ -4642,3 +4642,19 @@
     font-size: 25px;
   }
 }
+
+
+/* Callouts as card eyebrow */
+.c-project-card__info::before {
+  content: none;
+  display: none;
+}
+.c-project-card__eyebrow {
+  margin-bottom: 18px;
+  color: #9a78d0;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
