@@ -12,7 +12,7 @@ social_image: https://annabelstewart.github.io/case-studies/images/playground_ic
 
 ## Situation
 
-Describe what changed. Include the affected page types, the scale of the problem and the evidence that first indicated something was wrong.
+
 
 ## Task
 
