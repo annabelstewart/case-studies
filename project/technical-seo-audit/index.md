@@ -9,11 +9,6 @@ social_image: https://annabelstewart.github.io/case-studies/images/playground_ic
 
 ## Overview
 
-Use this opening section to explain the project in two or three sentences. State the website context, the problem and why it mattered commercially.
-
-| My role | Project length | Tools |
-| --- | --- | --- |
-| [Your ownership] | [Timeframe] | Search Console, Screaming Frog, log files |
 
 ## Situation
 
