@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,22 +8,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Technical SEO Audit</title>
+  <title>{{ page.title }} | SEO Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="/case-studies/favicon.svg?v=2">
-  <meta name='description' content='A reusable case-study page for a technical SEO diagnosis and recovery project.'>
+  <meta name="description" content="{{ page.description | escape }}">
 
-  <link rel="canonical" href="https://annabelstewart.github.io/case-studies/project/technical-seo-audit/">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Technical SEO Audit – SEO">
-  <meta name="twitter:description" content="A reusable case-study page for a technical SEO diagnosis and recovery project.">
-  <meta name="twitter:image:src" content="https://annabelstewart.github.io/case-studies/images/playground_icon.jpeg">
+  <meta name="twitter:title" content="{{ page.title }} | SEO Portfolio">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+  <meta name="twitter:image:src" content="{{ page.social_image | default: site.social_image }}">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content="Technical SEO Audit – SEO">
-  <meta property="og:description" content="A reusable case-study page for a technical SEO diagnosis and recovery project.">
-  <meta property="og:image" content="https://annabelstewart.github.io/case-studies/images/playground_icon.jpeg">
+  <meta property="og:title" content="{{ page.title }} | SEO Portfolio">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:image" content="{{ page.social_image | default: site.social_image }}">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -122,9 +124,11 @@
 
 <div class="container">
   <div class="c-page-heading">
-    <h1 class="c-page-heading__title">Technical SEO Audit</h1>
+    <h1 class="c-page-heading__title">{{ page.title }}</h1>
     
-      <p class="c-page-heading__description">Crawling · Rendering · Indexation</p>
+      {% if page.subtitle %}
+      <p class="c-page-heading__description">{{ page.subtitle }}</p>
+      {% endif %}
     
   </div>
 </div>
@@ -133,62 +137,7 @@
   
 
   <div class="page animate">
-    <h2 id="overview">Overview</h2>
-
-<p>Use this opening section to explain the project in two or three sentences. State the website context, the problem and why it mattered commercially.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>My role</th>
-      <th>Project length</th>
-      <th>Tools</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>[Your ownership]</td>
-      <td>[Timeframe]</td>
-      <td>Search Console, Screaming Frog, log files</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="situation">Situation</h2>
-
-<p>Describe what changed. Include the affected page types, the scale of the problem and the evidence that first indicated something was wrong.</p>
-
-<h2 id="task">Task</h2>
-
-<p>Explain the outcome you were responsible for delivering and any important constraints, such as engineering capacity, data quality or launch deadlines.</p>
-
-<h2 id="action">Action</h2>
-
-<ol>
-  <li><strong>Diagnosed the pattern:</strong> Explain how you segmented the decline and ruled out unrelated causes.</li>
-  <li><strong>Tested the technical hypothesis:</strong> Compare source HTML, rendered HTML and crawler behaviour.</li>
-  <li><strong>Prioritised the fixes:</strong> Show how you ranked issues by commercial impact and implementation effort.</li>
-  <li><strong>Mobilised delivery:</strong> Explain how you worked with developers and validated the release.</li>
-</ol>
-
-<h2 id="result">Result</h2>
-
-<p>Lead with one verified headline result.</p>
-
-<ul>
-  <li><strong>Primary outcome:</strong> [Add a percentage, revenue figure or recovered traffic measure]</li>
-  <li><strong>Secondary outcome:</strong> [Add an operational or quality improvement]</li>
-  <li><strong>What lasted:</strong> [Add the monitoring, process or standard created]</li>
-</ul>
-
-<h2 id="key-tools">Key tools</h2>
-
-<p>Search Console · Screaming Frog · Log analysis · Looker Studio</p>
-
-<h2 id="reflection">Reflection</h2>
-
-<p>Add one short lesson: what would you repeat, improve or measure differently next time?</p>
-
+    {{ content }}
   </div>
 
   
