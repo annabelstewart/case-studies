@@ -4518,3 +4518,10 @@
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/* Keep Latest Work card text visible without requiring hover. */
+.c-project-card .c-project-card__title,
+.c-project-card .c-project-card__subtitle {
+  opacity: 1;
+  transform: translateZ(0);
+}
