@@ -1,0 +1,9 @@
+@media only screen and (min-width: 769px) {
+  .c-project-card__content {
+    grid-template-columns: minmax(360px, 46%) 1fr;
+  }
+}
+
+.c-hero__description p + p {
+  margin-top: 16px;
+}
